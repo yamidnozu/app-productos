@@ -1,0 +1,8 @@
+#producto {
+  line-height: 0px;
+}
+
+img:hover {
+  transform: translateY(-3px) scale(1.2);
+  box-shadow: 0 4px 17px rgba(black, 0.35);
+}

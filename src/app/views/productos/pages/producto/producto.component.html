@@ -1,0 +1,18 @@
+<div class="card">
+    <section id="producto">
+        <label>{{producto.descripcion}}</label>
+        <p>Disponibles: {{producto.cantidadDisponible}} </p>
+        <p>Llevalo por ${{producto.precio}}</p>
+    </section>
+
+    <img (click)="clkImagen(producto)" [src]="producto.miniatura" [alt]="producto.descripcion"
+        [title]="producto.descripcion" [ngStyle]="{'width.px':100}" />
+
+    <button (click)="pedirProducto(producto)"
+     [disabled]="producto.cantidadDisponible === 0"
+        [title]="producto.cantidadDisponible === 0 ?  producto.descripcion + ' se han agotado': 'Pide tu '+ producto.descripcion">
+        Pedir
+    </button>
+</div>
+
+<app-overlay-fullscreen #overlayfullscreeen></app-overlay-fullscreen>

@@ -1,0 +1,8 @@
+<h1>Productos</h1>
+<div class="card-container">
+    <div *ngFor="let producto of productos$ | async">
+        <app-producto [producto]="producto">
+        </app-producto>
+    </div>
+</div>
+<div class="modal-form"></div>

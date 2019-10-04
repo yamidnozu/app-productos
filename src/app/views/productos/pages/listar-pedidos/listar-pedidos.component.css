@@ -1,0 +1,45 @@
+
+body { 
+	font: 14px/1.4 Georgia, Serif; 
+}
+#page-wrap {
+	margin: 50px;
+}
+p {
+	margin: 20px 0; 
+}
+
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+}
+
+tr:nth-of-type(odd) { 
+    background: #eee; 
+}
+th { 
+    font-weight: bold; 
+}
+td, th { 
+    padding: 6px; 
+    border: 1px solid #ccc; 
+    text-align: left; 
+}
+
+tr { border: 1px solid #ccc; }
+
+td { 
+    border: none;
+    border-bottom: 1px solid #eee; 
+    position: relative;
+    padding-left: 50%; 
+}
+
+td:before { 
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%; 
+    padding-right: 10px; 
+    white-space: nowrap;
+}

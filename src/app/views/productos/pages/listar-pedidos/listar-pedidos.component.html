@@ -1,0 +1,28 @@
+<table>
+    <thead>
+        <tr>
+            <th>
+                <input type="text" [formControl]="input" placeholder="Buscar por ID"
+                    (keyup)="filtrar($event.target.value)">
+            </th>
+            <th>Nombre</th>
+            <th>Direccion</th>
+            <th>Descripcion</th>
+            <th>Imagen</th>
+        </tr>
+    </thead>
+    <tbody [ngStyle]="{'width.%':100}">
+        <tr *ngFor="let p of pedidosFiltro">
+            <th>{{p.id}}</th>
+            <th>{{p.datos?.nombre}}</th>
+            <th>{{p.datos?.direccion}}</th>
+            <th>{{p.producto?.descripcion}}</th>
+            <th>
+                <img [src]="p.producto?.miniatura" [alt]="p.producto?.descripcion" [title]="p.producto?.descripcion"
+                    [ngStyle]="{'width.px':40}" />
+            </th>
+        </tr>
+    </tbody>
+</table>
+
+<button [routerLink]="['/']">Regresar</button>
